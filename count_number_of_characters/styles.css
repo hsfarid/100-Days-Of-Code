@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: blueviolet;
+  display: grid;
+  place-items: center;
+  color: #333;
+}
+
+.form-container {
+  max-width: 500px;
+  height: 200px;
+  background-color: #ccc;
+  padding: 18px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.input-string {
+  width: 80%;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: 20px;
+}
+.output-screen {
+  margin: 20px;
+  text-align: left;
+}
+
+.output-screen span {
+  font-size: 32px;
+}
