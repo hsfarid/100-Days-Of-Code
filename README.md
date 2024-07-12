@@ -1,0 +1,2 @@
+This repository contains solved challenges and projects in both JavaScript and Python programming languages. 
+There are two branches in this repo (JavaScript and Python). Navigate to a specific branch if you want to see challenges or solutions in that language.
