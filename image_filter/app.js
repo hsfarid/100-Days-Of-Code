@@ -12,27 +12,25 @@ const images = [
   "house.avif",
 ];
 
-const generateHTML = function () {
+// Modified generateHTML function to accept an argument for images to display
+const generateHTML = function (imageList) {
   let html = "";
-  images.forEach((img) => {
-    html = `<div><img src="images/${img}" alt="" /></div>`;
-    imageContainer.innerHTML += html;
+  imageList.forEach((img) => {
+    html += `<div><img src="images/${img}" alt="" /></div>`;
   });
+  imageContainer.innerHTML = html; // Clear and update the container's content
 };
-generateHTML();
+
+// Initial call to display all images
+generateHTML(images);
 
 const filterImages = function (term) {
-  //   alert(term);
-  images
-    .filter((image, index) => {
-      return image[index].includes(term);
-    })
-    .forEach((res) => {
-      console.log(res);
-    });
+  const filteredImages = images.filter(image => image.includes(term));
+  generateHTML(filteredImages);
 };
 
 search.addEventListener("keyup", () => {
-  const term = search.value.trim;
+  const term = search.value.trim().toLowerCase(); // Ensure term is in lowercase for case-insensitive search
   filterImages(term);
 });
+
